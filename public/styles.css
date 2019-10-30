@@ -66,13 +66,29 @@ tbody th {
 
 .search {
   text-align: center;
-
 }
+
+* {
+  box-sizing:border-box
+}
+
+/*
+.mySlides {
+  display:none;
+}
+*/
+
+.slideshow-container {
+  position: relative;
+  margin: auto;
+}
+
 
 img {
   max-width:100%;
   height: auto;
 }
+
 
 footer {
   margin: 1px 1px 1px 1px;

@@ -10,7 +10,7 @@
 <body>
   <div id='navbar' align='center'>
     <a href='./index.html'>Home</a>
-    <a href='./properties.html'>Properties</a>
+    <a href='./properties.html' class="active">Properties</a>
     <a href='./tenants.html'>Tenants</a>
     <a href='./Owners.html'>Owners</a>
     <a href='./leases.html'>Leases</a>
@@ -18,6 +18,10 @@
 
 <h1>Properties</h1>
 <br>
+<div class="search"> 
+   <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Property ID"><br><br>
+  </div>
+
 <div class="box1">
   <br>
   <div align='center'>
@@ -91,13 +95,16 @@
 		<button onclick="location.href='./tenants_update.html'" type="button">Update a Property</button>
 </div>
 
+<script src="Home.js"></script>
+
     <div id='footer'>
     </footer>
-      <section class = 'contact-details'>
+<!--      <section class = 'contact-details'>
         <h2>Contact</h2>
         <p><a href=mailto:hollingx@oregonstate.edu>Email Xavier Hollingsworth</a><br />
            <a href=mailto:koenimat@oregonstate.edu>Email Matthew Koenig</a><br />
         </p>
+-->
       </footer>
     </div>
   </body>
