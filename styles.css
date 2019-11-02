@@ -17,16 +17,14 @@ h4 {
 
 * {box-sizing:border-box}
 
-.mySlides {
-  display:none;
-}
-
 .slideshow-container {
   position: relative;
   margin: auto;
 }
 
-
+.mySlides {
+  display: none;
+}
 
 /*adapted from w3schools lesson */ 
 
@@ -50,7 +48,7 @@ h4 {
 
 .navbar a:hover {
   background-color: #ddd;
-  color: black;
+  color: blue;
 }
 
 .navbar a.active {
@@ -69,9 +67,9 @@ form{
   padding: 10px;
 }
 
-h3{
+/*h3{
   width: 80px;
   margin-top: -20px;
   margin-left: 5px;
   background: white;
-}
+}*/
