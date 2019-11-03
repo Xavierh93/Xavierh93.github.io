@@ -1,10 +1,11 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
-  <meta charset = 'UTF-8'/>
+  <meta charset='UTF-8' />
   <title>CS 340 Final Project</title>
   <link href="https://fonts.googleapis.com/css?family=Raleway:100&amp;display=swap" rel="stylesheet">
-  <link href = "public/styles.css" type = "text/css" rel = "stylesheet"/>
+  <link href="public/styles.css" type="text/css" rel="stylesheet" />
 </head>
 
 <body>
@@ -16,77 +17,78 @@
     <a href="./leases.html" class="active">Leases</a>
   </div>
 
-<h1>Leases</h1>
-<br>
-<div class="search"> 
-   <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Lease ID"><br><br>
-	</div>
-
-<div class="box1">
+  <h1>Leases</h1>
   <br>
-  <div align='center'>
-   
-    <table id="techTable">
-      <thead>
-        <tr>
-          <th>Lease ID</th>
-          <th>Property ID</th>
-          <th>End Date</th>
-		  <th>Length Of Lease</th>
-		  <th>Rent</th>
-        </tr>
-      </thead>
-      <tbody id="techTableBody">
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-					<td></td>
-					<td></td>
-        </tr>
-        <tr> 
-          <td></td>
-          <td></td>
-          <td></td>
-					<td></td>
-					<td></td>
-				</tr>
-        <tr>     	
-          <td></td>
-          <td></td>
-          <td></td>
-					<td></td>
-					<td></td>
-				</tr>
-        <tr>	
-          <td></td>
-          <td></td>
-          <td></td>
-					<td></td>
-					<td></td>
-        </tr>
+  <div class="search">
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search"><br><br>
+  </div>
 
-      </tbody>
-    </table>
+  <div class="box1">
     <br>
-    <button onclick="location.href='./lease_add.html'" type="button">Add a New Lease</button>
-    <br>
-		<button onclick="location.href='./lease_remove.html'" type="button">Remove a Lease</button>
-		<br>
-		<button onclick="location.href='./lease_update.html'" type="button">Update a Lease</button>
-</div>
+    <div align='center'>
 
-<script src="Home.js"></script>
+      <table id="techTable">
+        <thead>
+          <tr>
+            <th>Lease ID</th>
+            <th>Property ID</th>
+            <th>End Date</th>
+            <th>Length Of Lease</th>
+            <th>Rent</th>
+          </tr>
+        </thead>
+        <tbody id="techTableBody">
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+        </tbody>
+      </table>
+      <br>
+      <button onclick="location.href='./lease_add.html'" type="button">Add a New Lease</button>
+      <br>
+      <button onclick="location.href='./lease_remove.html'" type="button">Remove a Lease</button>
+      <br>
+      <button onclick="location.href='./lease_update.html'" type="button">Update a Lease</button>
+    </div>
+
+    <script src="Home.js"></script>
     <div id='footer'>
-    </footer>
-<!--    
+      </footer>
+      <!--    
       <section class = 'contact-details'>
         <h2>Contact</h2>
         <p><a href=mailto:hollingx@oregonstate.edu>Email Xavier Hollingsworth</a><br />
            <a href=mailto:koenimat@oregonstate.edu>Email Matthew Koenig</a><br />
         </p>
--->    
+-->
       </footer>
     </div>
-  </body>
-  </html>
+</body>
+
+</html>
