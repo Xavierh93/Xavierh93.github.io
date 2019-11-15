@@ -1,18 +1,31 @@
 var slideIndex = 1;
-showSlides();
-myFunction();
+showSlides(slideIndex);
 
-function showSlides() {
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
   }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
   slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 900000000000000)
+} 
+myFunction();
 
 
 function myFunction() {
@@ -36,3 +49,55 @@ function myFunction() {
     }
   }
 }
+
+// Property Class
+class Property {
+  constructor(id, address, unit, zip, sf, rooms, brs, fee) {
+    this.id = id;
+    this.address = address;
+    this.unit = unit;
+    this.zip = zip;
+    this.sf = sf;
+    this.rooms = rooms;
+    this.brs = brs;
+    this.fee = fee;
+  }
+}
+
+// UI Class
+class UI {
+  static displayProperties() {
+    const StoredProperties = [
+      {
+        id: '1',
+        address: '789 crystal bay lane',
+        unit: 'N/A',
+        zip: '32885',
+        sf: '3000',
+        rooms: '4',
+        brs: '3',
+        fee: '50'
+      },
+      {
+        id: '2',
+        address: '790 crystal bay lane',
+        unit: 'N/A',
+        zip: '32885',
+        sf: '4000',
+        rooms: '6',
+        brs: '3',
+        fee: '100'
+      }
+    ]
+
+    const properties = StoredProperties;
+  }
+}
+
+// Store Class: Handles Storage
+
+// Event: Display Properties
+
+// Event: Add a Book
+
+// Event: Remove a Book
