@@ -91,6 +91,12 @@ class UI {
     ]
 
     const properties = StoredProperties;
+
+    properties.forEach((property) => UI.addPropToList(property));
+
+    static addPropToList(property) {
+      const list = document.querySelector()
+    }
   }
 }
 
