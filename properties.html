@@ -5,109 +5,121 @@
   <meta charset='UTF-8' />
   <title>CS 340 Final Project</title>
   <link href="https://fonts.googleapis.com/css?family=Raleway:100&amp;display=swap" rel="stylesheet">
+  <link href="public/bootstrap.min.css" type="text/css" rel="stylesheet" />
   <link href="public/styles.css" type="text/css" rel="stylesheet" />
 </head>
 
 <body>
-  <div id='navbar' align='center'>
-    <ul><a href='./index.html'>Home</a>
-      <a href='./properties.html' class="active">Properties</a>
-      <a href='./tenants.html'>Tenants</a>
-      <a href='./Owners.html'>Owners</a>
-      <a href='./leases.html'>Leases</a>
-  </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Sequelists Property Management</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="properties.html">Properties</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tenants.html">Tenants</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="owners.html">About</a>
+          </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search">
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+    </nav>
 
-  <h1>Properties</h1>
+        <div class="container mt-4">
+            <h1 class="display-4 text-center">
+              <i class="fas fa-book-open text-primary"></i> Properties<span class="text-primary"></span></h1>
   <br>
   <div class="search">
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search"><br><br>
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search" align='right'><br><br>
   </div>
+
+  <form id="book-form">
+      <div class="form-group">
+        <label for="title">ID</label>
+        <input type="text" id="title" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="author">Street Address</label>
+        <input type="text" id="author" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="isbn">Unit Number</label>
+        <input type="text" id="isbn" class="form-control">
+      </div>
+      <div class="form-group">
+          <label for="isbn">Zip Code</label>
+          <input type="text" id="isbn" class="form-control">
+      </div>
+      <div class="form-group">
+          <label for="isbn">Square Footage</label>
+          <input type="text" id="isbn" class="form-control">
+      </div>  
+      <div class="form-group">
+          <label for="title">Rooms</label>
+          <input type="text" id="title" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="author">Bathrooms</label>
+          <input type="text" id="author" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="isbn">Management Fee</label>
+          <input type="text" id="isbn" class="form-control">
+        </div>
+      <input type="submit" value="Add Property" class="btn btn-primary btn-block">
+    </form>
 
   <div class="box1">
     <br>
     <div align='center'>
-      <table id="techTable">
-        <thead>
-          <tr>
-            <th>Property ID</th>
-            <th>Street Address</th>
-            <th>Unit Number</th>
-            <th>Zipcode</th>
-            <th>Square Footage</th>
-            <th>Rooms</th>
-            <th>Bathrooms</th>
-            <th>Management Fee</th>
-            <th>Lease ID</th>
-          </tr>
-        </thead>
-        <tbody id="techTableBody">
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
+        <table class="table table-striped mt-5">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Street Address</th>
+                <th>Unit Number</th>
+                <th>Zipcode</th>
+                <th>Square Footage</th>
+                <th>Rooms</th>
+                <th>Bathrooms</th>
+                <th>Management Fee</th>
+                <th>Lease ID</th>
+              </tr>
+            </thead>
+            <tbody id="book-list"></tbody>
+          </table>
+      
 
-        </tbody>
-      </table>
-      <br>
-      <button onclick="location.href='./properties_add.html'" type="button">Add a New Property</button>
-      <br>
-      <input type='text' name='propertyid' value='ID' onfocus="if (this.value = 'ID'){this.value =''}">
-      <button onclick="location.href='./tenants_remove.html'" type="button">Remove a Property</button>
-      <br>
-      <button onclick="location.href='./tenants_update.html'" type="button">Update a Property</button>
     </div>
 
-    <script src="Home.js"></script>
 
-    <div id='footer'>
-      </footer>
-      <!--      <section class = 'contact-details'>
-        <h2>Contact</h2>
-        <p><a href=mailto:hollingx@oregonstate.edu>Email Xavier Hollingsworth</a><br />
-           <a href=mailto:koenimat@oregonstate.edu>Email Matthew Koenig</a><br />
-        </p>
--->
-      </footer>
+
+    <script src="home.js"></script>
+
+    <div id="footer">
+        <footer>
+          <section class='contact-details'>
+            <h3 class='contact'>Contact</h3>
+            <p><a class='contacts' href=mailto:hollingx@oregonstate.edu>Xavier Hollingsworth</a><br />
+              <a class='contacts' href=mailto:koenimat@oregonstate.edu>Matthew Koenig</a><br />
+            </p>
+          </section>
+        </footer>
+      </div>
+    
     </div>
 </body>
 
