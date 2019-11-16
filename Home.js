@@ -1,7 +1,4 @@
 
-myFunction();
-
-// Next/pr
 
 
 myFunction();
