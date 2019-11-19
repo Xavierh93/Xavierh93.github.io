@@ -90,7 +90,7 @@ INSERT INTO property_owner (Property_ID, Owner_ID) VALUES (3, 3);
 INSERT INTO property_owner (Property_ID, Owner_ID) VALUES (4, 4);
 
 
-**USE THIS TO CLEAR OUT ALL TABLES, IF NEEDED**
+-- USE THIS TO CLEAR OUT ALL TABLES, IF NEEDED
 DROP TABLE property_owner;
 DROP TABLE lease_owner;
 DROP TABLE tenant;
