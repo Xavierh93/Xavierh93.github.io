@@ -17,7 +17,6 @@ class RegistrationForm(FlaskForm):
     def validate_username(self, username):
         query = "SELECT id FROM user WHERE username = '" + username.data + "'" 
         
-        
 
 
 class LoginForm(FlaskForm):
