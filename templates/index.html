@@ -1,73 +1,14 @@
-<!DOCTYPE html>
-<html>
+{% extends "base.html" %}
 
-<head>
-	<meta charset="UTF-8">
-	<title>Property Management</title>
-	<link href="https://fonts.googleapis.com/css?family=Raleway:100&amp;display=swap" rel="stylesheet">
-	<link href="{{ url_for('static', filename='bootstrap.min.css') }}" type="text/css" rel="stylesheet" />
-	<link href="{{ url_for('static', filename='styles.css') }}" type="text/css" rel="stylesheet" />
-</head>
+{% block head %}
+{% endblock %}
 
-<body>
-	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-			<a class="navbar-brand" href="/">Sequelists Property Management</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-				  <span class="navbar-toggler-icon"></span>
-				</button>
-				
-		<div class="collapse navbar-collapse" id="navbarColor01">
-				  <ul class="navbar-nav mr-auto">
-				  <li class="nav-item active">
-					<a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
-				  </li>
-				  <li class="nav-item">
-					<a class="nav-link" href="properties.html">Properties</a>
-				  </li>
-				  <li class="nav-item">
-					<a class="nav-link" href="tenants.html">Tenants</a>
-				  </li>
-				  <li class="nav-item">
-					<a class="nav-link" href="owners.html">Owners</a>
-				  </li>
-				  <li class="nav-item">
-					<a class="nav-link" href="owners.html">Leases</a>
-					</li>
-				  </ul>
-		</div>
-	</nav>
-	
-	<div class="slideshow-container">
-		<div class="mySlides ">	
-			<img class="img-fluid" src="/static/images/lux.jpg" style="width:100%">
-			
-		</div>
+{% block body %}
+<div class="slideshow-container">
+	<div class="mySlides ">
+		<img class="img-fluid" src="/static/images/lux.jpg" style="width:100%">
 
-
-		
-
-	<br>
-
-
-	<br>
-
-	<!--<script src="home.js"></script>-->
-
-
-
-	</a><br><br><br><br>
-
-	<div id="footer">
-		<footer>
-			<section class='contact-details'>
-				<h3 class='contact'>Contact</h3>
-				<p><a class='contacts' href=mailto:hollingx@oregonstate.edu>Xavier Hollingsworth</a><br />
-					<a class='contacts' href=mailto:koenimat@oregonstate.edu>Matthew Koenig</a><br />
-				</p>
-			</section>
-		</footer>
 	</div>
+</div>
 
-</body>
-
-</html>
+{% endblock %}
