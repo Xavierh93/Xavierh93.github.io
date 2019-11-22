@@ -46,8 +46,10 @@ def editproperty():
 @app.route('/register', methods=['GET', 'POST'])
 def register():
         form = RegistrationForm()
-        if form.validate_on_submit():
+        print('in register')
+        if form.is_submitted():
             flash(f'Account created for {form.username.data}!', 'success')
+            print('success')
             return redirect(url_for('index'))
         return render_template("register.html", title='Register', form=form)
 
